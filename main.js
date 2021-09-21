@@ -28,14 +28,15 @@ const currents=currentPrice.value;
     if(numOfShares.value,purchasePrice.value,currentPrice.value!==''){
         const absoluteReturn=profitorLoss(purchased,currents,number);
 const percentageReturn=percententaged(purchased,currents,number);
+const percent=percentageReturn.toFixed(2);
 // output.innerText="your profit is "+ profitorLoss(number,purchased,currents);
 // percentOutput.innerText="your percent return is"+percententaged(number,purchased,currents);
 if(absoluteReturn<0){
    const negativeReturn=-(absoluteReturn);
-   const negativePercent=-(percentageReturn);
+   const negativePercent=-(percent);
     warn.innerText=`your loss is ${negativeReturn} you have losted ${negativePercent}% of your wealth`;
     }
-    else{warn.innerText=`you profit is ${absoluteReturn} you have earned${percentageReturn}% from your wealth`;
+    else{warn.innerText=`you profit is ${absoluteReturn} you have earned${percent}% from your wealth`;
 
     }
 }
