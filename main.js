@@ -2,8 +2,7 @@ const numOfShares = document.querySelector("#number-of-shares");
 const purchasePrice = document.querySelector("#purchase-price");
 const currentPrice = document.querySelector("#current-price");
 const calculateButton = document.querySelector("#calculate");
-// const output=document.querySelector("absolute-output");
-// const percentOutput=document.querySelector("#percentage-output");
+
 const warn = document.querySelector("#warning");
 
 function profitorLoss(purchase, current, number) {
@@ -28,7 +27,7 @@ function clickHandler() {
 
     if (numOfShares.value, purchasePrice.value, currentPrice.value !== '')
      {
-        if (numOfShares.value || purchasePrice.value || currentPrice.value <= 0)
+        if (numOfShares.value<=0 || purchasePrice.value<=0 || currentPrice.value <=0)
         {
             warn.innerText="Please enter valid values"
 
