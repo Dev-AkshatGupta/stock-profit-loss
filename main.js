@@ -29,14 +29,17 @@ const currents=currentPrice.value;
         const absoluteReturn=profitorLoss(purchased,currents,number);
 const percentageReturn=percententaged(purchased,currents,number);
 const percent=percentageReturn.toFixed(2);
-// output.innerText="your profit is "+ profitorLoss(number,purchased,currents);
-// percentOutput.innerText="your percent return is"+percententaged(number,purchased,currents);
+
+
 if(absoluteReturn<0){
    const negativeReturn=-(absoluteReturn);
    const negativePercent=-(percent);
+   warn.style.color='red';
     warn.innerText=`your loss is ${negativeReturn} you have losted ${negativePercent}% of your wealth`;
     }
-    else{warn.innerText=`you profit is ${absoluteReturn} you have earned${percent}% from your wealth`;
+    else{
+      warn.style.color='green';
+      warn.innerText=`you profit is ${absoluteReturn} you have earned ${percent}% from your wealth`;
 
     }
 }

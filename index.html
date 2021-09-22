@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="/style.css"rel="stylesheet">
     <title>share profit and loss</title>
 </head>
 <body>
-    <h1>what is your profit or loss in shares</h1>
-    <label for="number-of-shares">number of shares</label>
-    <input id="number-of-shares" type="number"/>
-    <label for="purchase-price">purchase price of shares</label>
-    <input id="purchase-price" type="number"/>
-    <label for="current-price">current price of shares</label>
-    <input id="current-price" type="number"/>
+    <div class="container">
+     <h1>what is your profit or loss in shares</h1>
+    <div><label for="number-of-shares">number of shares</label>
+    <input id="number-of-shares" type="number"/></div>
+    <div><label for="purchase-price">purchase price of shares</label>
+    <input id="purchase-price" type="number"/></div>
+    <div><label for="current-price">current price of shares</label>
+    <input id="current-price" type="number"/></div>
     <button id="calculate">profit/loss</button>
-    <label for="you profit/loss">you profit/loss</label>
-    <!-- <textarea disabled id="absolute-output"></textarea>
-    <label for="percentage profit/loss">percentage profit/loss</label>
-    <textarea disabled id="percentage-output"></textarea> -->
+        
     <div id="warning"></div>
+    </div>
     
 </body>
 <script src="/main.js"></script>
