@@ -27,7 +27,7 @@ function clickHandler() {
 
     if (numOfShares.value, purchasePrice.value, currentPrice.value !== '')
      {
-        if (numOfShares.value<=0 || purchasePrice.value<=0 || currentPrice.value <=0)
+        if (numOfShares.value<=0 || purchasePrice.value<=0 || currentPrice.value < 0)
         {
             warn.innerText="Please enter valid values"
 
@@ -37,18 +37,25 @@ function clickHandler() {
             const percentageReturn = percententaged(purchased, currents, number);
             const percent = percentageReturn.toFixed(2);
 
-
-            if (absoluteReturn < 0) {
-                const negativeReturn = -(absoluteReturn);
-                const negativePercent = -(percent);
-                warn.style.color = 'red';
-                warn.innerText = `your loss is ${negativeReturn} you have losted ${negativePercent}% of your wealth`;
+            if(absoluteReturn === 1){
+                warn.style.color='blue';
+                warn.innerText=`you have earned neither profit nor made loss`;
             }
-         else {
-            warn.style.color = 'green';
-            warn.innerText = `you profit is ${absoluteReturn} you have earned ${percent}% from your wealth`;
+else{
+    if (absoluteReturn < 0) {
+        const negativeReturn = -(absoluteReturn);
+        const negativePercent = -(percent);
+        warn.style.color = 'red';
+        warn.innerText = `your loss is ${negativeReturn} you have losted ${negativePercent}% of your wealth`;
+    }
+ else {
+    warn.style.color = 'green';
+    warn.innerText = `you profit is ${absoluteReturn} you have earned ${percent}% from your wealth`;
 
-        }}
+}
+}
+
+            }
     } else {
         warn.innerText = "please fill all the given fields";
     }
