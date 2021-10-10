@@ -25,7 +25,7 @@ function clickHandler() {
     const purchased = purchasePrice.value;
     const currents = currentPrice.value;
 
-    if (numOfShares.value, purchasePrice.value, currentPrice.value !== '')
+    if (numOfShares.value!=="" && purchasePrice.value!=="" && currentPrice.value !== '')
      {
         if (numOfShares.value<=0 || purchasePrice.value<=0 || currentPrice.value < 0)
         {
